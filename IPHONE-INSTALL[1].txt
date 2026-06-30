@@ -1,0 +1,33 @@
+BT Gym - iPhone Install
+
+Do not open index.html directly from the iPhone Files app. iOS often blocks or partially loads local app files, which can show the interface without the workout data.
+
+Best setup:
+
+1. Upload this whole folder to a static website host such as Netlify, Vercel, Cloudflare Pages, GitHub Pages, or any normal web host.
+2. Open the website link in Safari on your iPhone.
+3. Tap Share.
+4. Tap Add to Home Screen.
+5. Open BT Gym from the new home-screen icon.
+
+Will it save data?
+
+Yes. Your loads, reps, completed exercises, notes, active week/day, and theme are saved on your iPhone in Safari storage. They remain there when you use the same home-screen app.
+
+Do not clear Safari website data if you want to keep your logs.
+
+Offline use:
+
+After the first successful Safari visit from a real website link, the app caches itself for offline use. Open it once while online before taking it to the gym.
+
+Files required for hosting:
+
+- index.html
+- styles.css
+- app.js
+- routine-data.js
+- manifest.webmanifest
+- sw.js
+- icon-180.png
+- icon-192.png
+- icon-512.png

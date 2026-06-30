@@ -1,0 +1,25 @@
+{
+  "name": "Bodybuilding Transformation Gym Companion",
+  "short_name": "BT Gym",
+  "description": "A gym companion for the 12-week bodybuilding routine with set tracking, rest timers, substitutions, and notes.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#080908",
+  "theme_color": "#080908",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

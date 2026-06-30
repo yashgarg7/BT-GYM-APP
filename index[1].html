@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#080908">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="BT Gym">
+    <title>Gym Routine Companion</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="icon-180.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">BT</div>
+        <div>
+          <p class="eyebrow">Intermediate / Advanced</p>
+          <h1>Gym Routine Companion</h1>
+        </div>
+      </div>
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle theme" title="Toggle theme">MODE</button>
+    </header>
+
+    <main class="shell">
+      <section class="control-band" aria-label="Workout controls">
+        <label>
+          <span>Week</span>
+          <select id="weekSelect"></select>
+        </label>
+        <label>
+          <span>Day</span>
+          <select id="daySelect"></select>
+        </label>
+        <button id="warmupBtn" class="secondary" type="button">Warm-up</button>
+        <button id="resetDayBtn" class="secondary danger" type="button">Clear day</button>
+      </section>
+
+      <section class="summary">
+        <div>
+          <p id="phaseLabel" class="eyebrow"></p>
+          <h2 id="dayTitle"></h2>
+          <p id="dayMeta"></p>
+        </div>
+        <div class="progress-wrap" aria-label="Workout progress">
+          <span class="progress-label">Complete</span>
+          <strong id="progressText">0%</strong>
+          <div class="progress"><span id="progressBar"></span></div>
+        </div>
+      </section>
+
+      <section class="timer-panel" aria-label="Rest timer">
+        <div>
+          <p class="eyebrow">Rest Timer</p>
+          <strong id="timerDisplay">00:00</strong>
+        </div>
+        <div class="timer-actions">
+          <button data-rest="60" type="button">1 min</button>
+          <button data-rest="90" type="button">1:30</button>
+          <button data-rest="120" type="button">2 min</button>
+          <button data-rest="180" type="button">3 min</button>
+          <button id="stopTimerBtn" class="secondary" type="button">Stop</button>
+        </div>
+      </section>
+
+      <section id="exerciseList" class="exercise-list" aria-live="polite"></section>
+    </main>
+
+    <dialog id="warmupDialog">
+      <form method="dialog">
+        <div class="dialog-head">
+          <h2>Warm-up Protocol</h2>
+          <button class="icon-btn" value="close" aria-label="Close" title="Close">X</button>
+        </div>
+        <div class="warmup-grid">
+          <div>
+            <h3>General</h3>
+            <ul id="generalWarmup"></ul>
+          </div>
+          <div>
+            <h3>Exercise-specific</h3>
+            <ul id="specificWarmup"></ul>
+          </div>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="routine-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
